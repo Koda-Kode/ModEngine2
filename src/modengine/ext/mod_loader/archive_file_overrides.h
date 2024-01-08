@@ -43,4 +43,6 @@ HANDLE WINAPI tCreateFileW(LPCWSTR lpFileName, DWORD dwDesiredAccess, DWORD dwSh
     LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes,
     HANDLE hTemplateFile);
 
+std::optional<fs::path> find_override_file(const fs::path& game_path);
+
 }
