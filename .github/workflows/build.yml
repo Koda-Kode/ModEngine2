@@ -8,7 +8,7 @@ name: hosted-pure-workflow
 on:
   push:
     branches:
-      - main
+      - '*/*'
   pull_request:
     branches:
       - main
@@ -89,7 +89,6 @@ jobs:
       - name: Build
         run: |
           cmake --build "${{ env.CMAKE_BUILD_DIR }}" --target package
-
       - name: Show content of workspace at its completion
         run: find $RUNNER_WORKSPACE
         shell: bash
